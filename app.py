@@ -67,10 +67,10 @@ def callback():
             continue
         if not isinstance(event.message, TextMessage):
             continue
-
+        reply_text = "「" + event.message.text + "」ぴくんね"
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text)
+            TextSendMessage(text=reply_text)
         )
 
     return 'OK'
